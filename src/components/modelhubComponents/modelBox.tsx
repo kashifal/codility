@@ -99,12 +99,13 @@ export const ModelBox = () => {
                     alt=""
                     height={376}
                     width={100}
+                    quality={100}
                   />
                   <div className="flex items-center  mt-7 justify-between">
                     <p className="text-lg font-bold text-gray-900">
                       {model.title}
                     </p>
-                    <span className="inline-flex items-center  items-center justify-center px-2 pr-3 py-1 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 ">
+                    <span className="inline-flex   items-center justify-center px-2 pr-3 py-1 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 ">
                       ⚡0.5s latency
                     </span>
                   </div>

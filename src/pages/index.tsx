@@ -11,7 +11,7 @@ import {HeroSection} from "@/components/indexComponents/HeroSection";
 
  const HomePage = () => {
   return (
-    <section className="py-12 bg-gray-50 sm:py-16 lg:py-[7rem]">
+    <section className="pt-12 bg-gray-50 sm:pt-16 lg:pt-[7rem]">
       <HeroSection />
       {/* <div className="flex w-full items-center justify-center p-[32px]">
         <button

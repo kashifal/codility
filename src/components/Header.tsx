@@ -75,6 +75,13 @@ export const Header = () => {
                 >
                   Documentation
                 </a>
+                <Link
+                  href="/sign-up"
+                  title=""
+                  className="text-base font-medium  transition-all duration-200 rounded  font-pj hover:text-opacity-50 text-[#fff]"
+                >
+                  Sign Up
+                </Link>
               </nav>
               {/* <a
                 href="#"

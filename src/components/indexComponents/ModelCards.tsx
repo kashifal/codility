@@ -1,7 +1,6 @@
  
 
-import segmindLogo from "/segmind.png";
-import segmind from "/logo-white.png";
+ 
 import Image from "next/image";
 import { BsFillLightningChargeFill, BsClouds } from "react-icons/bs";
 import { BiRocket } from "react-icons/bi";
@@ -13,8 +12,15 @@ import image2 from "/testimon-images/ezgif.com-gif-maker.png";
 import image3 from "/testimon-images/blend_logo.svg";
 import image4 from "/testimon-images/hexo-logo.d3a6592c.svg";
 import image5 from "/testimon-images/kaiber.jpg";
-import image6 from "/testimon-images/blockade.jpg";
+import image6 from "/testimon-images/blockade.jpg"; 
 import image7 from "/testimon-images/logo.png";
+import Link from "next/link";
+import segmindLogo from "../../../public/segmind.png";
+import segmind from "../../../public/logo-white.png";
+
+
+
+
 
 export const ModelCards = () => {
   return (
@@ -252,234 +258,33 @@ export const ModelCards = () => {
         </div>
       </section>
 
-      <footer className="py-12 bg-white sm:py-16 lg:py-20">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="flex w-full justify-center">
-            <img
-              src="https://stage.segmind.com/img/segmind-white-full.066fc4ce.svg"
-              alt=""
-            />
+      <footer className="py-12 bg-black sm:py-16 lg:py-20">
+        <div className=" mx-auto max-w-[1400px] flex-wrap px-8 h-full flex items-center justify-between rounded ring-gray-800 ring-1">
+          <div className="flex   justify-start py-6 ">
+          <Link href="/" title="">
+                <div className="flex flex-row items-center">
+                  <Image className="w-[50px]" src={segmindLogo} alt="" />
+                  <Image className="w-[100px] h-[27px]" src={segmind} alt="" />
+                </div>
+              </Link>
+            <ul className="flex items-center gap-3 ml-8">
+              <li className="text-xs text-gray-400">Sigmend Inc @ 2022-2023</li>
+              <li  className="text-xs text-gray-400">Privacy Policy</li>
+              <li  className="text-xs text-gray-400">Main Cloud Services Agreement (MCSA)</li>
+            </ul>
           </div>
 
-          <ul className="flex flex-wrap items-center justify-center space-x-12 md:space-x-16 mt-14">
-            <li>
-              <a
-                href="#"
-                title=""
-                className="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:text-gray-600"
-              >
-                {" "}
-                About{" "}
-              </a>
-            </li>
+          
 
-            <li>
-              <a
-                href="#"
-                title=""
-                className="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:text-gray-600"
-              >
-                {" "}
-                Features{" "}
-              </a>
-            </li>
+         
 
-            <li>
-              <a
-                href="#"
-                title=""
-                className="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:text-gray-600"
-              >
-                {" "}
-                Works{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#"
-                title=""
-                className="inline-flex mt-8 -ml-12 text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:text-gray-600 sm:ml-0 sm:mt-0"
-              >
-                {" "}
-                Support{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#"
-                title=""
-                className="inline-flex mt-8 text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:text-gray-600 sm:mt-0"
-              >
-                {" "}
-                Help{" "}
-              </a>
-            </li>
-          </ul>
-
-          <div className="mt-12">
-            <svg
-              className="w-auto h-4 mx-auto text-gray-300"
-              viewBox="0 0 172 16"
-              fill="none"
-              stroke="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)"
-              />
-              <line
-                y1="-0.5"
-                x2="18.0278"
-                y2="-0.5"
-                transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)"
-              />
-            </svg>
-          </div>
-
-          <ul className="flex items-center justify-center mt-12 space-x-3">
-            <li>
+          <ul className="flex items-center justify-center  space-x-3">
+            <li className="">
               <a
                 href="#"
                 target="_blank"
                 title=""
-                className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                className="inline-flex items-center  ring-1 ring-white  justify-center w-10 h-10 text-white transition-all duration-200   hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
                 rel="noopener"
               >
                 <svg
@@ -493,12 +298,12 @@ export const ModelCards = () => {
               </a>
             </li>
 
-            <li>
+            <li className="">
               <a
                 href="#"
                 target="_blank"
                 title=""
-                className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                className="inline-flex items-center  ring-1 ring-white  justify-center w-10 h-10 text-white transition-all duration-200   hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
                 rel="noopener"
               >
                 <svg
@@ -512,12 +317,12 @@ export const ModelCards = () => {
               </a>
             </li>
 
-            <li>
+            <li className="">
               <a
                 href="#"
                 target="_blank"
                 title=""
-                className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                className="inline-flex items-center  ring-1 ring-white  justify-center w-10 h-10 text-white transition-all duration-200   hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
                 rel="noopener"
               >
                 <svg
@@ -533,16 +338,16 @@ export const ModelCards = () => {
               </a>
             </li>
 
-            <li>
+            <li className="">
               <a
                 href="#"
                 target="_blank"
                 title=""
-                className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+                className="inline-flex items-center  ring-1 ring-white  justify-center w-10 h-10 text-white transition-all duration-200   hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
                 rel="noopener"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
@@ -557,9 +362,7 @@ export const ModelCards = () => {
             </li>
           </ul>
 
-          <p className="text-base font-normal text-center text-gray-600 mt-7 font-pj">
-            © Copyright 2021, All Rights Reserved
-          </p>
+         
         </div>
       </footer>
     </>

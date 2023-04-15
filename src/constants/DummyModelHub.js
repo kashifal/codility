@@ -6,6 +6,11 @@ export const dummyModelCardData = [
       route: "ControlNet-Openpose",
       badge: "SD-1.5",
       img: "/home/image1.jpg",
+      api:'https://api.segmind.com/v1/sd1.5-controlnet-openpose',
+      seed: '549767547333',
+      strength: "1",
+      guidance_scale: "7.5",
+      negative_prompt : 'NONE'
     },
     {
       title: "ControlNet-Scribble",
@@ -15,6 +20,11 @@ export const dummyModelCardData = [
       img: "/home/image2.jpg",
   
       badge: "SD-1.4",
+      api:'https://api.segmind.com/v1/sd1.5-controlnet-scribble',
+      seed: '85497675147333',
+      strength: "1",
+      guidance_scale: "7.5",
+      negative_prompt : 'NONE'
     },
     {
       title: "jagilley/controlnet-hed",
@@ -23,6 +33,11 @@ export const dummyModelCardData = [
       route: "jagilley-controlnet-hed",
       badge: "SD-1.4",
       img: "/home/image5.jpg",
+      api:'https://api.segmind.com/v1/sd1.5-controlnet-hed',
+      seed: '1543285487314',
+      strength: "1",
+      guidance_scale: "7.5",
+      negative_prompt : 'mangled ears'
     },
     {
       title: "ControlNet-Depth",
@@ -31,6 +46,11 @@ export const dummyModelCardData = [
       route: "ControlNet-Depth",
       badge: "SD-2.0",
       img: "/home/image6.jpg",
+      api:'https://api.segmind.com/v1/sd1.5-controlnet-depth',
+      seed: '131487365682',
+      strength: "1",
+      guidance_scale: "7.5",
+      negative_prompt : 'mangled ears'
     },
     {
       title: "ControlNet Canny",
@@ -39,6 +59,11 @@ export const dummyModelCardData = [
       route: "jagilley-controlnet-pose",
       badge: "SD-2.1",
       img: "/home/canny.jpg",
+      api:'https://api.segmind.com/v1/sd1.5-controlnet-canny',
+      seed: '3131738736286',
+      strength: "1",
+      guidance_scale: "7.5",
+      negative_prompt : 'NONE'
     },
     {
       title: "ControlNet MLSD",
@@ -47,6 +72,11 @@ export const dummyModelCardData = [
       route: "ControlNet-MLSD",
       badge: "SD-1.5",
       img: "/home/msld.jpg",
+      api:'https://api.segmind.com/v1/sd1.5-controlnet-mlsd',
+      seed: '1314873682',
+      strength: "1",
+      guidance_scale: "7.5",
+      negative_prompt : 'moon'
     },
     {
       title: "stable-diffusion-inpainting",
@@ -55,6 +85,11 @@ export const dummyModelCardData = [
       route: "stable-diffusion-inpainting",
       badge: "SD-2.1",
       img: "/home/impainting.jpg",
+      api:'https://api.segmind.com/v1/sd2.1-txt2img',
+      seed: '17123564234',
+      strength: "1",
+      guidance_scale: "7.5",
+      negative_prompt : 'NONE'
     },
     {
       title: "Stable-diffusion-2.1",
