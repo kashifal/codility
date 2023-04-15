@@ -9,7 +9,7 @@ import {useState, useEffect} from 'react';
 export const ModelBox = () => {
     const [inputValue, setInputValue] = useState("");
     const [searchModel, setSearchModel] = useState(dummyModelCardData);
-    const [empty, setEmpty] = useState(false);
+    // const [empty, setEmpty] = useState(false);
 
 
  
@@ -26,15 +26,13 @@ export const ModelBox = () => {
         
         const filteredData = dummyModelCardData.filter((item) => {
             if (inputValue === "") {
-                setEmpty(false);
+              
               return item;
             } else {
-                if(searchModel.length === 0){
-                    setEmpty(true);
-                }else{
+                
                     
                     return item.title.toLowerCase().includes(inputValue);
-                }
+            
            
             }
           });
@@ -89,7 +87,7 @@ export const ModelBox = () => {
               </div>
             </div>
           </div>
-          <h1 className={empty ? 'block  text-gray-600 font-semibold text-2xl text-center mt-44' : 'hidden'}>Not Found</h1>
+        
           <div className="grid grid-cols-1 mt-12 text-center sm:px-16 md:px-0 md:gap-x-8 gap-y-12 md:text-left md:grid-cols-3">
      
             {searchModel.map((model, i) => {
