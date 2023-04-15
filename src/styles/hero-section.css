@@ -1,0 +1,10 @@
+@tailwind components;
+
+@layer components {
+  .setmaxrange {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 600px;
+  }
+}
