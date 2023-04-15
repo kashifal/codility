@@ -116,6 +116,7 @@ export const ModelBox = () => {
                   <div className="mt-6 flex gap-[10px]">
                     <Link
                       href={`/${model.route}`}
+                    //   `/products/${product.id}`
                       title=""
                       className="inline-flex gap-[10px] items-center justify-center px-5 py-3 text-xs font-bold tracking-widest text-gray-900 uppercase transition-all duration-200 bg-transparent border border-gray-900 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:border-gray-900 hover:bg-gray-900 hover:text-white"
                       role="button"
