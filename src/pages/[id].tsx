@@ -86,7 +86,7 @@ const ModelDetailPage = () => {
 
     try {
       const response = await axios.post(
-        currentModel[0]?.api,
+        `${currentModel[0]?.api}`,
         {
           prompt: formInput.prompt,
           negative_prompt: currentModel[0]?.negative_prompt,
