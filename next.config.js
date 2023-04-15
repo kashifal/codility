@@ -1,3 +1,5 @@
+ 
+
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
@@ -9,5 +11,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
-
