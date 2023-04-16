@@ -86,7 +86,7 @@ export const ModelDetailPage = ({ id }: any) => {
       if (response.status === 200) {
         const imageUrl = URL.createObjectURL(response.data);
         setResponse(imageUrl);
-        console.log(imageUrl);
+       
         // setResponse(response.data);
       }
     } catch (error) {

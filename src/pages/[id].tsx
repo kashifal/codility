@@ -56,7 +56,7 @@ import { dummyModelCardData } from '@/constants/DummyModelHub';
 const ModelDetailPage = () => {
 
 
-  console.log(dummyModelCardData,'data');
+ 
   
   const router = useRouter();
   const { id } = router.query;
@@ -109,7 +109,7 @@ const ModelDetailPage = () => {
       if (response.status === 200) {
         const imageUrl = URL.createObjectURL(response.data);
         setResponse(imageUrl);
-        console.log(imageUrl);
+        
         setLoading(false);
         
         const endTime = performance.now();
@@ -132,7 +132,7 @@ const ModelDetailPage = () => {
     return null;
   }
 
-  console.log(currentModel[0]?.img);
+ 
   
   return (
     <>
