@@ -98,6 +98,7 @@ export const ModelBox = () => {
                     src={model.img}
                     alt=""
                     height={376}
+                    unoptimized={true}
                     width={100}
                     quality={100}
                   />

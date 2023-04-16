@@ -346,6 +346,7 @@ const ModelDetailPage = () => {
                                 alt="not found"
                                 width={250}
                                 height={250}
+                                unoptimized={true}
                                 src={URL.createObjectURL(selectedImage)}
                               />
                               <br />
@@ -396,6 +397,7 @@ const ModelDetailPage = () => {
                       alt=""
                       width={512}
                       height={512}
+                      unoptimized={true}
                     />
 
                     <h1 className="text-sm text-gray-400 font-semibold mt-4">Generated in {responseTime?.toFixed(1)} seconds</h1>
@@ -410,6 +412,7 @@ const ModelDetailPage = () => {
                       src={currentModel[0]?.img}
                       alt=""
                       width={512}
+                      unoptimized={true}
                       height={512}
                     />
 

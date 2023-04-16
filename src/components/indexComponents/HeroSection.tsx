@@ -38,6 +38,7 @@ export const HeroSection = () => {
               width={100}
               alt=""
               quality={100}
+              unoptimized={true}
             />
             <div className="flex items-center  mt-7 justify-between">
               <p className="text-lg font-bold text-gray-900">
