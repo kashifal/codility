@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { BsTrash } from "react-icons/bs";
 import { useRouter } from "next/router";
+import { CodeSection } from "@/components/Code";
 import Image from "next/image";
 const sd12 = [
   { scheduler: "DDIM" },
@@ -66,23 +67,48 @@ const ModelDetailPage = () => {
 
   const currentModel = dummyModelCardData.filter(
     (item) => (item.route === id)
-   
   );
+
+
+
+  console.log(currentModel,'here is ');
+  
+
+
   const [formInput, setFormInput] = useState({
-    prompt: "",
-    steps: "",
-    scheduler: "Select Scheduler",
+    prompt: currentModel[0]?.prompt,
+    steps: "20",
+    scheduler: "DDIM",
   });
-  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [selectedImage, setSelectedImage] = useState<File | null  >(null);
   const [response, setResponse] = useState<any>();
   const [loading, setLoading] = useState(false);
   const [responseTime, setResponseTime] = useState(2);
+  const [fileUrl, setFileUrl] = useState("kcjvlkjvlkfdjlk");
+  const [text, setText] = useState<any>(currentModel[0]?.imageUrl);
+  const [tabIndex, setTabIndex] = useState<Number>(0);
+
+
+  const tabs = [
+    {
+      id:1,
+      text:'Demo'
+    },
+    {
+      id:2,
+      text:'API'
+    }
+  ]
+
+ 
+
 
   const [dropDown, setDropDown] = useState(false);
 
   const getResponse = async (formInput: any, selectedImage: any) => {
     setLoading(true);
     const startTime = performance.now();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     try {
       const response = await axios.post(
@@ -126,13 +152,33 @@ const ModelDetailPage = () => {
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);
+    fetch(`https://media.istockphoto.com/id/165966770/vector/architecture.jpg?s=612x612&w=0&k=20&c=hNATWmHyJ4LYIKOVWeKr0gK7nivr6Dhvufe0qZ5xkjw=`)
+  .then(response => response.blob())
+  .then(blob => {
+    const file = new File([blob], 'sheer.jpg', { type: 'image/jpeg', lastModified: Date.now() });
+    setSelectedImage(file);
+    console.log(currentModel[0]?.imageUrl, 'here');
+    
+    
+  });
+  setText(currentModel[0]?.imageUrl);
   }, []);
   if (!hydrated) {
     // Returns null on first render, so the client and server match
     return null;
   }
 
+  const handleClearButtonClick = () => {
+    setFileUrl("");
+};
+
+
+
  
+ 
+
+
+
   
   return (
     <>
@@ -141,7 +187,7 @@ const ModelDetailPage = () => {
           <div className="grid items-stretch grid-cols-1 gap-y-12 lg:grid-cols-12 gap-x-16   mt-[3rem] ">
             <div className="flex flex-col justify-between lg:col-span-6">
               <div className="max-w-[35rem]">
-                <h2 className="text-3xl font-bold text-gray-900">
+                <h2  className="text-3xl font-bold text-gray-900">
                   {currentModel?.[0]?.title!}
                 </h2>
                 <p className="mt-4 text-base font-medium text-gray-500">
@@ -152,27 +198,31 @@ const ModelDetailPage = () => {
                   <div className=" mx-auto max-w-7xl">
                     <div className="w-full pb-1 overflow-x-auto">
                       <div className="border-b border-gray-200">
-                        <nav className="flex -mb-px space-x-10">
-                          <a
-                            href="#"
-                            className="py-4 text-sm font-medium text-gray-900 transition-all duration-200 border-b-2 border-transparent hover:border-gray-300 whitespace-nowrap"
-                          >
-                            Demo
-                          </a>
+                        <nav className="flex -mb-px space-x-0">
+                          {
+                            tabs?.map((tab, index:any) => (
+                              <a
+                              href="#"
+                              key={index}
+                              onClick={() => setTabIndex(index)}
+  
+                              className={`${tabIndex === index ? 'bg-gray-300 px-4 py-4 w-20 flex items-center justify-center text-sm font-medium text-gray-900 transition-all duration-200 border-b-2 border-transparent hover:border-gray-300 whitespace-nowrap' : 'py-4 text-sm w-20 flex items-center justify-center font-medium text-gray-900 transition-all duration-200 border-b-2 border-transparent hover:border-gray-300 whitespace-nowrap'} `}
+                            >
+                              {tab.text}
+                            </a>
+                            ))
+                          }
+                         
 
-                          <a
-                            href="#"
-                            className="py-4 text-sm font-medium text-gray-900 transition-all duration-200 border-b-2 border-transparent hover:border-gray-300 whitespace-nowrap"
-                          >
-                            API
-                          </a>
+                           
                         </nav>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Prompt  */}
+                <div className={`${tabIndex === 0 ? 'block' : 'hidden'}`}>
+                  {/* Prompt  */}
                 <div className="pb-[1rem] bg-white">
                   <div className=" mx-auto  max-w-7xl">
                     <div className="max-w-xl mx-auto">
@@ -183,7 +233,7 @@ const ModelDetailPage = () => {
                         <div className="mt-2">
                           <div className="mt-2">
                             <textarea
-                              value={formInput.prompt}
+                              value={ formInput.prompt  }
                               onChange={(e) =>
                                 setFormInput({
                                   ...formInput,
@@ -333,13 +383,78 @@ const ModelDetailPage = () => {
                           Upload a file:
                         </label>
                         <div className="relative mt-2 sm:mt-0 sm:flex-1">
-                          <input
+                           
+                         
+               
+                    <label
+                        htmlFor="dropzone-file"
+                        className="dark:hover:bg-bray-800 flex p-3 my-4 w-full cursor-pointer flex-col items-start px-6 justify-center rounded-lg border-2 border-dashed border-gray-300   dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                    >
+                        <input
                             type="file"
-                            onChange={(event) => {
-                              setSelectedImage(event?.target?.files?.[0]!);
-                            }}
-                            className=" mt-[8px] block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600"
-                          />
+                            id="dropzone-file"
+                            className="absolute left-0 top-0 h-full w-full hidden"
+                            onChange={(event) => { 
+
+                              const file = event?.target?.files?.[0]!;
+    setSelectedImage(file);
+    setText(URL.createObjectURL(file));
+                            }} 
+                        />
+                        <div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="black"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="h-5 w-5"
+                                role="presentation"
+                            >
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                               <h1 className="py-2">Upload Image</h1>
+                            <div className="flex flex-col items-start gap-1">
+                                <div className="truncate pt-1  w-[500px] overflow-hidden text-gray-500 text-xs">{text}</div>
+                                <button
+                                    title="Clear"
+                                    type="button"
+                                    
+                                    className={`${text === null ? 'hidden' : 'pointer-events-auto ml-1 flex-shrink p-2 rounded inline-flex  text-white bg-red-500'}`}
+                                    onClick={() =>{
+                                       setSelectedImage(null)
+                                       setText(null)
+                                      }}
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        className="h-5 w-5"
+                                        role="presentation"
+                                    >
+                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </label>
+                 
+         
                           {selectedImage && (
                             <div className="border">
                               <Image
@@ -350,12 +465,7 @@ const ModelDetailPage = () => {
                                 src={URL.createObjectURL(selectedImage)}
                               />
                               <br />
-                              <button
-                                className="bg-[red] px-3 py-[8px] text-[#fff] rounded-[4px]"
-                                onClick={() => setSelectedImage(null)}
-                              >
-                                <BsTrash />
-                              </button>
+                              
                             </div>
                           )}
                         </div>
@@ -370,6 +480,10 @@ const ModelDetailPage = () => {
                 >
                   Submit
                 </button>
+                </div>
+                <div className={`${tabIndex === 1 ? 'block' : 'hidden'}`}>
+                  <CodeSection />
+                </div>
               </div>
             </div>
             <div className="">
@@ -388,7 +502,7 @@ const ModelDetailPage = () => {
                   : <h1></h1>
               }
               {response ? (
-                <div className="lg:col-span-6 mt-[2.5rem] px-[2.5rem] py-[2.5rem] h-[750px] w-[668px] border">
+                <div className="lg:col-span-6 mt-[2.5rem] px-[2.5rem] py-[2.5rem]  w-[668px] border">
 
                   <div className="aspect-w-4 aspect-h-3 lg:aspect-none">
                     <Image
@@ -404,7 +518,7 @@ const ModelDetailPage = () => {
                   </div>
                 </div>
               ) : 
-              <div className="lg:col-span-6 mt-[2.5rem] px-[2.5rem] py-[2.5rem] h-[750px] w-[668px] border">
+              <div className="lg:col-span-6 mt-[2.5rem] px-[2.5rem] py-[2.5rem]  w-[668px] border">
 
                   <div className="aspect-w-4 aspect-h-3 lg:aspect-none">
                     <Image

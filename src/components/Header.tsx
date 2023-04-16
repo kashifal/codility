@@ -51,7 +51,7 @@ export const Header = () => {
             </div>
 
             <nav className="hidden lg:flex lg:items-center lg:justify-end lg:space-x-10">
-              <nav className="hidden lg:items-center lg:ml-16 lg:mr-auto lg:space-x-16 lg:flex">
+              <nav className="hidden lg:items-center lg:ml-16 lg:mr-auto lg:space-x-12 lg:flex">
                 <Link
                   href="/model-hub"
                   title=""
@@ -78,7 +78,7 @@ export const Header = () => {
                 <Link
                   href="/sign-up"
                   title=""
-                  className="text-base font-medium  transition-all duration-200 rounded  font-pj hover:text-opacity-50 text-[#fff]"
+                  className="text-base font-medium  transition-all duration-200 rounded  font-pj  text-black px-3 py-1.5 bg-[#fff]"
                 >
                   Sign Up
                 </Link>
