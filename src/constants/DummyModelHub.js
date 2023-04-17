@@ -12,7 +12,7 @@ export const dummyModelCardData = [
       guidance_scale: "7.5",
       negative_prompt : 'NONE',
       prompt: "astronaut running in spacesuit, colorful galaxy, stars, mystical dark sky",
-      imageUrl:"https://img.freepik.com/free-photo/high-angle-male-training-trail_23-2148482738.jpg?w=740&t=st=1681310703~exp=1681311303~hmac=6dd9303d2b2a98086baa8819e3a3f5d37d7c2e2b8d48cbec72a6412c1c1581e3"
+      imageUrl:"/id/openpose.jpeg"
     },
     {
       title: "ControlNet-Scribble",
@@ -28,7 +28,8 @@ export const dummyModelCardData = [
       guidance_scale: "7.5",
       negative_prompt : 'NONE',
       prompt: "steampunk underwater helmet, dark ocean background",
-      imageUrl:"https://preview.redd.it/sfs210ar0dia1.jpg?width=512&format=pjpg&auto=webp&v=enabled&s=1889774c380c3caa09036952f5678c7250473ab9"
+      imageUrl:"/id/scribble.jpeg"
+      
     },
     {
       title: "Controlnet-hed",
@@ -43,7 +44,7 @@ export const dummyModelCardData = [
       guidance_scale: "7.5",
       negative_prompt : 'mangled ears',
       prompt: "supercute saint bernard happy puppy, bokeh multicolor background, extremely detailed, sitting on a road",
-      imageUrl:"https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+      imageUrl:"/id/hed.jpeg"
     },
     {
       title: "ControlNet-Depth",
@@ -58,7 +59,7 @@ export const dummyModelCardData = [
       guidance_scale: "7.5",
       negative_prompt : 'mangled ears',
       prompt: "ancient roman buildings, in a forest, 4k, extremely detailed",
-      imageUrl:"https://cdn.shopify.com/s/files/1/0020/6130/3926/products/Bloon_Toys-24May18-698_Extended.jpg?v=1570360864"
+      imageUrl:"/id/depth.jpg"
     },
     {
       title: "ControlNet Canny",
@@ -66,14 +67,14 @@ export const dummyModelCardData = [
         "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
       route: "jagilley-controlnet-pose",
       badge: "SD-2.1",
-      img: "/home/canny.jpg",
+      img: "/home/canny.jpeg",
       api:'https://api.segmind.com/v1/sd1.5-controlnet-canny',
       seed: '3131738736286',
       strength: "1",
       guidance_scale: "7.5",
       negative_prompt : 'NONE',
       prompt: "a colorful bird, 4k",
-      imageUrl:"https://www.boredpanda.com/blog/wp-content/uploads/2020/05/B-z6qcUA82y-png__700.jpg"
+      imageUrl:"/id/canny.jpg"
     },
     {
       title: "ControlNet MLSD",
@@ -88,7 +89,7 @@ export const dummyModelCardData = [
       guidance_scale: "7.5",
       negative_prompt : 'moon',
       prompt: "modern wooden house, night shot, realistic snow capped mountains, dense pine trees, starry sky, 4k, hyperrealistic, extremely detailed",
-      imageUrl:"https://media.istockphoto.com/id/165966770/vector/architecture.jpg?s=612x612&w=0&k=20&c=hNATWmHyJ4LYIKOVWeKr0gK7nivr6Dhvufe0qZ5xkjw="
+      imageUrl:"/id/mlsd.jpg"
     },
     {
       title: "Stable-diffusion-inpainting",

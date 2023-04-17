@@ -92,7 +92,7 @@ export const ModelDetailPage = ({ id }: any) => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }; 
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);

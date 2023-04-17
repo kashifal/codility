@@ -268,7 +268,7 @@ export const ModelCards = () => {
                 </div>
               </Link>
             <ul className="flex items-center gap-3 ml-8">
-              <li className="text-xs text-gray-400">Sigmend Inc @ 2022-2023</li>
+              <li className="text-xs text-gray-400">Sigmind Inc @ 2022-2023</li>
               <li  className="text-xs text-gray-400">Privacy Policy</li>
               <li  className="text-xs text-gray-400">Main Cloud Services Agreement (MCSA)</li>
             </ul>

@@ -71,7 +71,7 @@ const ModelDetailPage = () => {
 
 
 
-  console.log(currentModel,'here is ');
+  
   
 
 
@@ -152,12 +152,12 @@ const ModelDetailPage = () => {
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);
-    fetch(`https://media.istockphoto.com/id/165966770/vector/architecture.jpg?s=612x612&w=0&k=20&c=hNATWmHyJ4LYIKOVWeKr0gK7nivr6Dhvufe0qZ5xkjw=`)
+    fetch(`${currentModel[0]?.imageUrl}`)
   .then(response => response.blob())
   .then(blob => {
     const file = new File([blob], 'sheer.jpg', { type: 'image/jpeg', lastModified: Date.now() });
     setSelectedImage(file);
-    console.log(currentModel[0]?.imageUrl, 'here');
+    
     
     
   });
@@ -397,8 +397,9 @@ const ModelDetailPage = () => {
                             onChange={(event) => { 
 
                               const file = event?.target?.files?.[0]!;
-    setSelectedImage(file);
-    setText(URL.createObjectURL(file));
+                              setSelectedImage(file);
+                              setText(URL.createObjectURL(file));
+                               
                             }} 
                         />
                         <div>

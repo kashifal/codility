@@ -17,7 +17,7 @@ export const dummyExploreCardData = [
       badge: "SD-1.4",
     },
     {
-      title: "jagilley/controlnet-hed",
+      title: "Controlnet-hed",
       discription:
         "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
       route: "jagilley-controlnet-hed",
@@ -38,7 +38,7 @@ export const dummyExploreCardData = [
         "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
       route: "jagilley-controlnet-pose",
       badge: "SD-2.1",
-      img: "/home/canny.jpg",
+      img: "/home/canny.jpeg",
     },
     {
       title: "ControlNet MLSD",
