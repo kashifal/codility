@@ -43,7 +43,8 @@ export const dummyModelCardData = [
       strength: "1",
       guidance_scale: "7.5",
       negative_prompt : 'mangled ears',
-      prompt: "supercute saint bernard happy puppy, bokeh multicolor background, extremely detailed, sitting on a road",
+      prompt: "ancient roman buildings, in a forest, 4k, extremely detailed",
+      
       imageUrl:"/id/hed.jpeg"
     },
     {
@@ -58,7 +59,8 @@ export const dummyModelCardData = [
       strength: "1",
       guidance_scale: "7.5",
       negative_prompt : 'mangled ears',
-      prompt: "ancient roman buildings, in a forest, 4k, extremely detailed",
+      prompt: "supercute saint bernard happy puppy, bokeh multicolor background, extremely detailed, sitting on a road",
+
       imageUrl:"/id/depth.jpg"
     },
     {
@@ -98,12 +100,12 @@ export const dummyModelCardData = [
       route: "stable-diffusion-inpainting",
       badge: "SD-2.1",
       img: "/home/impainting.jpg",
-      api:'https://api.segmind.com/v1/sd2.1-txt2img',
+      
       seed: '17123564234',
       strength: "1",
       guidance_scale: "7.5",
       negative_prompt : 'NONE',
-      prompt: "calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution",
+      
       // imageUrl:"https://img.freepik.com/free-photo/high-angle-male-training-trail_23-2148482738.jpg?w=740&t=st=1681310703~exp=1681311303~hmac=6dd9303d2b2a98086baa8819e3a3f5d37d7c2e2b8d48cbec72a6412c1c1581e3"
       mask:true
     },
@@ -113,6 +115,8 @@ export const dummyModelCardData = [
         "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
       route: "Stable-diffusion-2-1",
       badge: "SD-2.1",
+      api:'https://api.segmind.com/v1/sd2.1-txt2img',
+      prompt: "calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution",
       img: "/home/sd-2.jpeg",
       hide:true
     },

@@ -122,7 +122,7 @@ const ModelDetailPage = () => {
           guidance_scale: currentModel[0]?.guidance_scale,
           seed: currentModel[0]?.seed,
           strength: currentModel[0]?.strength,
-          file: selectedImage,
+          // file: selectedImage,
         },
         {
           headers: {
