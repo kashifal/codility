@@ -566,7 +566,7 @@ const ModelDetailPage = () => {
                                 width={250}
                                 height={250}
                                 unoptimized={true}
-                                src={currentModel[0]?.maskUrl}
+                                src={currentModel[0]?.maskUrl ?? ""}
                               />
                               <br />
                               
