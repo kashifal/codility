@@ -32,7 +32,7 @@ export const dummyModelCardData = [
       
     },
     {
-      title: "Controlnet-hed",
+      title: "ControlNet-Hed",
       discription:
         "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
       route: "jagilley-controlnet-hed",
@@ -100,13 +100,13 @@ export const dummyModelCardData = [
       route: "stable-diffusion-inpainting",
       badge: "SD-2.1",
       img: "/home/impainting.jpg",
-      
+      api:'http://140.238.249.123:5002/voltaml/volta_inpainting/sd-1.5-inpainting-dyn',
       seed: '17123564234',
       strength: "1",
       guidance_scale: "7.5",
       negative_prompt : 'NONE',
-      
-      // imageUrl:"https://img.freepik.com/free-photo/high-angle-male-training-trail_23-2148482738.jpg?w=740&t=st=1681310703~exp=1681311303~hmac=6dd9303d2b2a98086baa8819e3a3f5d37d7c2e2b8d48cbec72a6412c1c1581e3"
+      maskUrl:"https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo_mask.png",    
+      imageUrl:"https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo.png",
       mask:true
     },
     {
@@ -130,3 +130,17 @@ export const dummyModelCardData = [
     },
   ];
   
+
+  // http://140.238.249.123:5002/voltaml/volta_inpainting/sd-1.5-inpainting-dyn
+// {
+//     "prompt": "mecha robot sitting on a bench",
+//     "negative_prompt": "bad anatomy, bad hands, missing fingers",
+//     "samples": "1",
+//     "scheduler": "DDIM",
+//     "num_inference_steps": "20",
+//     "guidance_scale": "7.5",
+//     "seed": "113134799354",
+//     "strength": "0.9",
+//     "imageUrl":"https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo.png",
+//     "maskUrl":"https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo_mask.png"
+// }

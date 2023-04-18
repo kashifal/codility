@@ -497,13 +497,13 @@ const ModelDetailPage = () => {
                             type="file"
                             id="dropzone-file"
                             className="absolute left-0 top-0 h-full w-full hidden"
-                            onChange={(event) => { 
+                            // onChange={(event) => { 
 
-                              const file = event?.target?.files?.[0]!;
-                              setSelectedImage(file);
-                              setText(URL.createObjectURL(file));
+                            //   const file = event?.target?.files?.[0]!;
+                            //   setSelectedImage(file);
+                            //   setText(URL.createObjectURL(file));
                                
-                            }} 
+                            // }} 
                         />
                         <div>
                             <svg
@@ -566,7 +566,7 @@ const ModelDetailPage = () => {
                                 width={250}
                                 height={250}
                                 unoptimized={true}
-                                src={URL.createObjectURL(selectedImage)}
+                                src={currentModel[0]?.maskUrl}
                               />
                               <br />
                               
