@@ -20,7 +20,7 @@ const ComponentName = () => {
                     <form action="#" method="POST" className="mt-12">
                         <div className="space-y-4">
                             <div>
-                                <label for="" className="text-base font-medium text-gray-900 font-pj"> Email </label>
+                                <label htmlFor="" className="text-base font-medium text-gray-900 font-pj"> Email </label>
                                 <div className="mt-2.5">
                                     <input type="email" name="" id="" placeholder="Email address" className="block w-full px-4 py-4 text-gray-900 placeholder-gray-600 bg-white border border-gray-400 rounded-xl focus:border-gray-900 focus:ring-gray-900 caret-gray-900" />
                                 </div>
@@ -28,7 +28,7 @@ const ComponentName = () => {
 
                             <div>
                                 <div className="flex items-center justify-between">
-                                    <label for="" className="text-base font-medium text-gray-900 font-pj"> Password </label>
+                                    <label htmlFor="" className="text-base font-medium text-gray-900 font-pj"> Password </label>
 
                                     <a href="#" title="" className="text-base font-medium text-gray-500 rounded font-pj hover:text-gray-900 hover:underline focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"> Forgot Password? </a>
                                 </div>
@@ -43,7 +43,7 @@ const ComponentName = () => {
                                 </div>
 
                                 <div className="ml-3 text-base">
-                                    <label for="terms" className="font-normal text-gray-900 font-pj"> Remember me </label>
+                                    <label htmlFor="terms" className="font-normal text-gray-900 font-pj"> Remember me </label>
                                 </div>
                             </div>
                         </div>
