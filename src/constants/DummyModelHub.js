@@ -105,6 +105,7 @@ export const dummyModelCardData = [
       negative_prompt : 'NONE',
       prompt: "calico cat wearing a cosmonaut suit, 3d render, pixar style, 8k, high resolution",
       // imageUrl:"https://img.freepik.com/free-photo/high-angle-male-training-trail_23-2148482738.jpg?w=740&t=st=1681310703~exp=1681311303~hmac=6dd9303d2b2a98086baa8819e3a3f5d37d7c2e2b8d48cbec72a6412c1c1581e3"
+      mask:true
     },
     {
       title: "Stable-diffusion-2.1",
@@ -113,6 +114,7 @@ export const dummyModelCardData = [
       route: "Stable-diffusion-2-1",
       badge: "SD-2.1",
       img: "/home/sd-2.jpeg",
+      hide:true
     },
     {
       title: "Stable-diffusion-img2img",

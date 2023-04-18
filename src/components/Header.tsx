@@ -76,7 +76,7 @@ export const Header = () => {
                   Documentation
                 </a>
                 <Link
-                  href="/sign-up"
+                  href="/signup"
                   title=""
                   className="text-base font-medium  transition-all duration-200 rounded  font-pj  text-black px-3 py-1.5 bg-[#fff]"
                 >
