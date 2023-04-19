@@ -57,12 +57,12 @@ import { dummyModelCardData } from '@/constants/DummyModelHub';
 const ModelDetailPage = () => {
 
 
- 
-  
+
+
   const router = useRouter();
   const { id } = router.query;
- 
-  
+
+
 
 
   const currentModel = dummyModelCardData.filter(
@@ -71,8 +71,8 @@ const ModelDetailPage = () => {
 
 
 
-  
-  
+
+
 
 
   const [formInput, setFormInput] = useState({
@@ -100,7 +100,7 @@ const ModelDetailPage = () => {
     }
   ]
 
- 
+
 
 
   const [dropDown, setDropDown] = useState(false);
@@ -122,7 +122,7 @@ const ModelDetailPage = () => {
           guidance_scale: currentModel[0]?.guidance_scale,
           seed: currentModel[0]?.seed,
           strength: currentModel[0]?.strength,
-          // file: selectedImage,
+          file: selectedImage,
         },
         {
           headers: {
@@ -135,14 +135,14 @@ const ModelDetailPage = () => {
       if (response.status === 200) {
         const imageUrl = URL.createObjectURL(response.data);
         setResponse(imageUrl);
-        
+
         setLoading(false);
-        
+
         const endTime = performance.now();
     const duration = endTime - startTime;
 
     setResponseTime(duration / 1000);
-        
+
         // setResponse(response.data);
       }
     } catch (error) {
@@ -157,9 +157,9 @@ const ModelDetailPage = () => {
   .then(blob => {
     const file = new File([blob], 'sheer.jpg', { type: 'image/jpeg', lastModified: Date.now() });
     setSelectedImage(file);
-    
-    
-    
+
+
+
   });
   setText(currentModel[0]?.imageUrl);
   }, []);
@@ -172,14 +172,6 @@ const ModelDetailPage = () => {
     setFileUrl("");
 };
 
-
-
- 
- 
-
-
-
-  
   return (
     <>
       <section className="py-12 bg-white sm:py-16 lg:py-20">
@@ -205,16 +197,16 @@ const ModelDetailPage = () => {
                               href="#"
                               key={index}
                               onClick={() => setTabIndex(index)}
-  
+
                               className={`${tabIndex === index ? 'bg-gray-300 px-4 py-4 w-20 flex items-center justify-center text-sm font-medium text-gray-900 transition-all duration-200 border-b-2 border-transparent hover:border-gray-300 whitespace-nowrap' : 'py-4 text-sm w-20 flex items-center justify-center font-medium text-gray-900 transition-all duration-200 border-b-2 border-transparent hover:border-gray-300 whitespace-nowrap'} `}
                             >
                               {tab.text}
                             </a>
                             ))
                           }
-                         
 
-                           
+
+
                         </nav>
                       </div>
                     </div>
@@ -383,9 +375,9 @@ const ModelDetailPage = () => {
                           Upload a file:
                         </label>
                         <div className="relative mt-2 sm:mt-0 sm:flex-1">
-                           
-                         
-               
+
+
+
                     <label
                         htmlFor="dropzone-file"
                         className="dark:hover:bg-bray-800 flex p-3 my-4 w-full cursor-pointer flex-col items-start px-6 justify-center rounded-lg border-2 border-dashed border-gray-300   dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-600"
@@ -394,18 +386,18 @@ const ModelDetailPage = () => {
                             type="file"
                             id="dropzone-file"
                             className="absolute left-0 top-0 h-full w-full hidden"
-                            onChange={(event) => { 
+                            onChange={(event) => {
 
                               const file = event?.target?.files?.[0]!;
                               setSelectedImage(file);
                               setText(URL.createObjectURL(file));
-                               
-                            }} 
+
+                            }}
                         />
                         <div>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                
+
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="black"
@@ -425,7 +417,7 @@ const ModelDetailPage = () => {
                                 <button
                                     title="Clear"
                                     type="button"
-                                    
+
                                     className={`${text === null ? 'hidden' : 'pointer-events-auto ml-1 flex-shrink p-2 rounded inline-flex  text-white bg-red-500'}`}
                                     onClick={() =>{
                                        setSelectedImage(null)
@@ -454,8 +446,8 @@ const ModelDetailPage = () => {
                             </div>
                         </div>
                     </label>
-                 
-         
+
+
                           {selectedImage && (
                             <div className="border">
                               <Image
@@ -466,7 +458,7 @@ const ModelDetailPage = () => {
                                 src={URL.createObjectURL(selectedImage)}
                               />
                               <br />
-                              
+
                             </div>
                           )}
                         </div>
@@ -486,9 +478,9 @@ const ModelDetailPage = () => {
                           Upload mask:
                         </label>
                         <div className="relative mt-2 sm:mt-0 sm:flex-1">
-                           
-                         
-               
+
+
+
                     <label
                         htmlFor="dropzone-file"
                         className="dark:hover:bg-bray-800 flex p-3 my-4 w-full cursor-pointer flex-col items-start px-6 justify-center rounded-lg border-2 border-dashed border-gray-300   dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-600"
@@ -497,18 +489,18 @@ const ModelDetailPage = () => {
                             type="file"
                             id="dropzone-file"
                             className="absolute left-0 top-0 h-full w-full hidden"
-                            // onChange={(event) => { 
+                            // onChange={(event) => {
 
                             //   const file = event?.target?.files?.[0]!;
                             //   setSelectedImage(file);
                             //   setText(URL.createObjectURL(file));
-                               
-                            // }} 
+
+                            // }}
                         />
                         <div>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                
+
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="black"
@@ -528,7 +520,7 @@ const ModelDetailPage = () => {
                                 <button
                                     title="Clear"
                                     type="button"
-                                    
+
                                     className={`${text === null ? 'hidden' : 'pointer-events-auto ml-1 flex-shrink p-2 rounded inline-flex  text-white bg-red-500'}`}
                                     onClick={() =>{
                                        setSelectedImage(null)
@@ -557,8 +549,8 @@ const ModelDetailPage = () => {
                             </div>
                         </div>
                     </label>
-                 
-         
+
+
                           {selectedImage && (
                             <div className="border">
                               <Image
@@ -569,7 +561,7 @@ const ModelDetailPage = () => {
                                 src={currentModel[0]?.maskUrl ?? ""}
                               />
                               <br />
-                              
+
                             </div>
                           )}
                         </div>
@@ -621,7 +613,7 @@ const ModelDetailPage = () => {
                     <h1 className="text-sm text-gray-400 font-semibold mt-4">Generated in {responseTime?.toFixed(1)} seconds</h1>
                   </div>
                 </div>
-              ) : 
+              ) :
               <div className="lg:col-span-6 mt-[2.5rem] px-[2.5rem] py-[2.5rem]  w-[668px] border">
 
                   <div className="aspect-w-4 aspect-h-3 lg:aspect-none">
