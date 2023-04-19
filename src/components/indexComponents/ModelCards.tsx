@@ -1,6 +1,6 @@
- 
 
- 
+
+
 import Image from "next/image";
 import { BsFillLightningChargeFill, BsClouds } from "react-icons/bs";
 import { BiRocket } from "react-icons/bi";
@@ -12,7 +12,7 @@ import image2 from "/testimon-images/ezgif.com-gif-maker.png";
 import image3 from "/testimon-images/blend_logo.svg";
 import image4 from "/testimon-images/hexo-logo.d3a6592c.svg";
 import image5 from "/testimon-images/kaiber.jpg";
-import image6 from "/testimon-images/blockade.jpg"; 
+import image6 from "/testimon-images/blockade.jpg";
 import image7 from "/testimon-images/logo.png";
 import Link from "next/link";
 import segmindLogo from "../../../public/segmind.png";
@@ -271,15 +271,15 @@ export const ModelCards = () => {
                 </div>
               </Link>
             <ul className="flex items-center gap-3 ml-8">
-              <li className="text-xs text-gray-400">Sigmind Inc @ 2022-2023</li>
+              <li className="text-xs text-gray-400">Segmind Inc @ 2022-2023</li>
               <li  className="text-xs text-gray-400">Privacy Policy</li>
               <li  className="text-xs text-gray-400">Main Cloud Services Agreement (MCSA)</li>
             </ul>
           </div>
 
-          
 
-         
+
+
 
           <ul className="flex items-center justify-center  space-x-3">
             <li className="">
@@ -365,7 +365,7 @@ export const ModelCards = () => {
             </li>
           </ul>
 
-         
+
         </div>
       </footer>
     </>

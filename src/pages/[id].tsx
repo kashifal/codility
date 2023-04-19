@@ -110,20 +110,24 @@ const ModelDetailPage = () => {
     const startTime = performance.now();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
+    const data: any = {
+            prompt: formInput.prompt,
+            negative_prompt: currentModel[0]?.negative_prompt,
+            samples: "1",
+            scheduler: formInput.scheduler,
+            num_inference_steps: formInput.steps,
+            guidance_scale: currentModel[0]?.guidance_scale,
+            seed: currentModel[0]?.seed,
+            strength: currentModel[0]?.strength,
+        }
+
+       if (currentModel[0]?.api !== 'https://api.segmind.com/v1/sd2.1-txt2img' )
+           data.file = selectedImage;
+
     try {
       const response = await axios.post(
         `${currentModel[0]?.api}`,
-        {
-          prompt: formInput.prompt,
-          negative_prompt: currentModel[0]?.negative_prompt,
-          samples: "1",
-          scheduler: formInput.scheduler,
-          num_inference_steps: formInput.steps,
-          guidance_scale: currentModel[0]?.guidance_scale,
-          seed: currentModel[0]?.seed,
-          strength: currentModel[0]?.strength,
-          file: selectedImage,
-        },
+        data,
         {
           headers: {
             "Content-Type": "multipart/form-data",

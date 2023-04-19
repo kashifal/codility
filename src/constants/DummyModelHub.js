@@ -2,7 +2,7 @@ export const dummyModelCardData = [
     {
       title: "ControlNet-Openpose",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images.",
+        "This model corresponds to the ControlNet conditioned on Scribble images.",
       route: "ControlNet-Openpose",
       badge: "SD-1.5",
       img: "/home/image1.jpg",
@@ -17,10 +17,10 @@ export const dummyModelCardData = [
     {
       title: "ControlNet-Scribble",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Canny edges.",
+        "This model corresponds to the ControlNet conditioned on Canny edges.",
       route: "ControlNet-Scribble",
       img: "/home/image2.jpg",
-  
+
       badge: "SD-1.4",
       api:'https://api.segmind.com/v1/sd1.5-controlnet-scribble',
       seed: '85497675147333',
@@ -29,12 +29,12 @@ export const dummyModelCardData = [
       negative_prompt : 'NONE',
       prompt: "steampunk underwater helmet, dark ocean background",
       imageUrl:"/id/scribble.jpeg"
-      
+
     },
     {
-      title: "ControlNet-Hed",
+      title: "ControlNet-HED",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
+        "This model corresponds to the ControlNet conditioned on HED Boundary.",
       route: "jagilley-controlnet-hed",
       badge: "SD-1.4",
       img: "/home/image5.jpg",
@@ -44,13 +44,13 @@ export const dummyModelCardData = [
       guidance_scale: "7.5",
       negative_prompt : 'mangled ears',
       prompt: "ancient roman buildings, in a forest, 4k, extremely detailed",
-      
+
       imageUrl:"/id/hed.jpeg"
     },
     {
       title: "ControlNet-Depth",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Depth estimation.",
+        "This model corresponds to the ControlNet conditioned on Depth estimation.",
       route: "ControlNet-Depth",
       badge: "SD-2.0",
       img: "/home/image6.jpg",
@@ -66,7 +66,7 @@ export const dummyModelCardData = [
     {
       title: "ControlNet Canny",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
+        "This model corresponds to the ControlNet conditioned on HED Boundary.",
       route: "jagilley-controlnet-pose",
       badge: "SD-2.1",
       img: "/home/canny.jpeg",
@@ -81,7 +81,7 @@ export const dummyModelCardData = [
     {
       title: "ControlNet MLSD",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
+        "This model corresponds to the ControlNet conditioned on HED Boundary.",
       route: "ControlNet-MLSD",
       badge: "SD-1.5",
       img: "/home/msld-2.jpeg",
@@ -96,7 +96,7 @@ export const dummyModelCardData = [
     {
       title: "Stable-diffusion-inpainting",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
+        "This model corresponds to the ControlNet conditioned on HED Boundary.",
       route: "stable-diffusion-inpainting",
       badge: "SD-2.1",
       img: "/home/impainting.jpg",
@@ -105,14 +105,14 @@ export const dummyModelCardData = [
       strength: "1",
       guidance_scale: "7.5",
       negative_prompt : 'NONE',
-      maskUrl:"https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo_mask.png",    
+      maskUrl:"https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo_mask.png",
       imageUrl:"https://raw.githubusercontent.com/CompVis/latent-diffusion/main/data/inpainting_examples/overture-creations-5sI6fQgYIuo.png",
       mask:true
     },
     {
       title: "Stable-diffusion-2.1",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
+        "This model corresponds to the ControlNet conditioned on HED Boundary.",
       route: "Stable-diffusion-2-1",
       badge: "SD-2.1",
       api:'https://api.segmind.com/v1/sd2.1-txt2img',
@@ -123,13 +123,13 @@ export const dummyModelCardData = [
     {
       title: "Stable-diffusion-img2img",
       discription:
-        "ControlNet is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on HED Boundary.",
+        "This model corresponds to the ControlNet conditioned on HED Boundary.",
       route: "stable-diffusion-img2img",
       badge: "SD-2.1",
       img: "/home/imgtoimg.jpg",
     },
   ];
-  
+
 
   // http://140.238.249.123:5002/voltaml/volta_inpainting/sd-1.5-inpainting-dyn
 // {
