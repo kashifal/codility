@@ -5,13 +5,15 @@ import clsx from 'clsx'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 
-import theme from 'prism-react-renderer/themes/vsLight' 
+import theme from 'prism-react-renderer/themes/github' 
+// import "prismjs/plugins/toolbar/prism-toolbar.min.css";
+// import "prismjs/plugins/toolbar/prism-toolbar.min";
+// import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min";
 
 
 import Highlight, { defaultProps } from 'prism-react-renderer'    
 
-const codeLanguage = 'javascript'
-const code = `https://dummyjson.com/products/1`
+const codeLanguage = 'bash'
 
 const tabs = [
   { name: 'App.js', isActive: true },
@@ -28,8 +30,15 @@ function TrafficLightsIcon(props:any) {
   )
 }
 
-export function CodeSection() {
+export function CodeSection({api}) {
+  console.log({api})
     const [isCopied, setIsCopied] = useState(false);
+
+    const codeblock = `
+${api?.api}
+    
+${JSON.stringify(api?.params, null, "\t")}
+    `
 
 
   return (
@@ -55,7 +64,7 @@ export function CodeSection() {
                     
                     <Highlight
                       {...defaultProps}
-                      code={code}
+                      code={codeblock}
                       language={codeLanguage}
                       theme={theme}
                     >
@@ -89,8 +98,8 @@ export function CodeSection() {
                       )}
                     </Highlight>
 
-                    <CopyToClipboard
-          text={code}
+                    {/* <CopyToClipboard
+          text={api.api}
           onCopy={() => setIsCopied(true)}
         >
           <button
@@ -98,7 +107,7 @@ export function CodeSection() {
           >
             {isCopied ? 'Copied!' : 'Copy'}
           </button>
-        </CopyToClipboard>
+        </CopyToClipboard> */}
                   </div>
                 </div>
               </div>

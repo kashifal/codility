@@ -13,7 +13,7 @@ export const HeroSection = () => {
       </div>
       <div className="flex flex-col justify-between items-start">
         <p className="max-w-lg mx-auto mt-4 text-sm font-medium text-gray-500 lg:mx-0 lg:mt-0">
-          Just use our high performance APIs or bring your own models. We
+          Unleash your applications with our high performance APIs or bring your own models. We
           will supercharge and scale them on your cloud or ours.
         </p>
         <a
